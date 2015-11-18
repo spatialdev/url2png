@@ -35,9 +35,9 @@ app.use(function(err, req, res, next) {
 
 // START THE SERVER
 // =============================================================================
-app.listen(9999, function(){
+app.listen(8999, function(){
 
-    console.log('API listening on port 9999.');
+    console.log('API listening on port 8999.');
 
 });
 
