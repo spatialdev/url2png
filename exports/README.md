@@ -1,0 +1,1 @@
+This directory will store PNG exports for up to 24 hrs;  It is cleared at midnight PST.
