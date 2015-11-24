@@ -14,6 +14,7 @@
     "compression": "^1.6.0",
     "cors": "^2.7.1",
     "cron": "^1.0.9",
-    "express": "^4.13.3"
+    "express": "^4.13.3",
+    "minimist": "^1.2.0"
   }
 }
