@@ -1,20 +1,16 @@
 {
-  "name": "print-server",
-  "version": "0.0.0",
-  "description": "",
-  "main": "app.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+  "engines": {
+    "node": ">= 0.10.0"
   },
-  "author": "",
-  "license": "ISC",
+  "devDependencies": {
+    "grunt": "~0.4.5",
+    "grunt-contrib-jshint": "~0.10.0",
+    "grunt-contrib-nodeunit": "~0.4.1",
+    "grunt-contrib-watch": "~0.6.1",
+    "grunt-shell": "^1.1.2"
+  },
   "dependencies": {
-    "banquo": "^0.3.1",
-    "body-parser": "^1.14.1",
-    "compression": "^1.6.0",
-    "cors": "^2.7.1",
-    "cron": "^1.0.9",
-    "express": "^4.13.3",
-    "minimist": "^1.2.0"
+    "json-refs": "^1.3.0",
+    "lodash": "^3.10.1"
   }
 }
