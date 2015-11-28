@@ -3,32 +3,32 @@ POST service endpoint that takes URL and converts the associated webpage to a PN
 
 <div style="font-family: sans-serif;">
     <h2>API Documentation</h2>
-    <ul style="list-style-type:none; padding:0;" >
-
-
-            <li style="
-               margin-bottom: 12px;
-               margin-top: 3px;"><a style ="font-family: monospace;
+    <div style="list-style-type:none; padding:0;" >
+        
+        
+            <div style="margin-bottom: 12px;margin-top: 3px;"><a style ="font-family: monospace;
                font-size: 1.2em; text-decoration: none" href="#/url2png_post">
                 <span style="color:#08C;">/url2png</span>
                 <div style="display: inline-block; color: #FFF; border-radius: 3px; padding: .25em .5em;
                          background-color: #13c20f;
-                        ">POST</div></a></li>
-
-
-    </ul>
+                        ">POST</div></a></div>
+        
+    
+    </div>
 </div>
-<hr>
-<ul style="list-style-type:none; padding:0; font-family: sans-serif;">
 
-    <li style="list-style-type:none; padding:0">
+<hr>
+
+<div style="list-style-type:none; padding:0; font-family: sans-serif;">
+    
+    <div style="list-style-type:none; padding:0">
         <header style ="font-family: monospace;
                font-size: 1.5em;
                margin-bottom: 12px;
                margin-top: 3px; color:#333">/url2png</header>
-        <ul style="list-style-type:none; padding:0">
-
-            <li style="font-family: sans-serif;
+        <div style="list-style-type:none; padding:0">
+            
+            <div style="font-family: sans-serif;
                   list-style-type: none;
                   border-radius: 3px;
                   position: relative;
@@ -51,7 +51,7 @@ POST service endpoint that takes URL and converts the associated webpage to a PN
                         min-width: 68px;
                         text-align: center;
                          background-color: #13c20f;
-
+                        
                         color: #ffffff;
                         float:left"><a style="color:#FFFFFF" name="/url2png_post">/url2png POST</a>
                     </div>
@@ -79,7 +79,7 @@ POST service endpoint that takes URL and converts the associated webpage to a PN
                                 </tr>
                                 </thead>
                                 <tbody>
-
+                                
                                 <tr>
                                     <td style="padding: 12px 8px;border: #e0e0e0 1px solid;">url</td>
                                     <td style="padding: 12px 8px;border: #e0e0e0 1px solid;">true</td>
@@ -87,7 +87,7 @@ POST service endpoint that takes URL and converts the associated webpage to a PN
                                     <td style="padding: 12px 8px;border: #e0e0e0 1px solid;">string ()</td>
                                     <td style="padding: 12px 8px;border: #e0e0e0 1px solid;">URL of webpage to convert</td>
                                 </tr>
-
+                                
                                 <tr>
                                     <td style="padding: 12px 8px;border: #e0e0e0 1px solid;">viewport_width</td>
                                     <td style="padding: 12px 8px;border: #e0e0e0 1px solid;">false</td>
@@ -95,7 +95,7 @@ POST service endpoint that takes URL and converts the associated webpage to a PN
                                     <td style="padding: 12px 8px;border: #e0e0e0 1px solid;">number (integer)</td>
                                     <td style="padding: 12px 8px;border: #e0e0e0 1px solid;">The width of the produced PNG (default is 1440px)</td>
                                 </tr>
-
+                                
                                 <tr>
                                     <td style="padding: 12px 8px;border: #e0e0e0 1px solid;">delay</td>
                                     <td style="padding: 12px 8px;border: #e0e0e0 1px solid;">false</td>
@@ -103,7 +103,7 @@ POST service endpoint that takes URL and converts the associated webpage to a PN
                                     <td style="padding: 12px 8px;border: #e0e0e0 1px solid;">number (integer)</td>
                                     <td style="padding: 12px 8px;border: #e0e0e0 1px solid;">The time delay (ms) before executing image capture (default is 5000 ms)</td>
                                 </tr>
-
+                                
                                 </tbody>
                             </table>
                         </div>
@@ -111,7 +111,7 @@ POST service endpoint that takes URL and converts the associated webpage to a PN
                     <section>
                         <div style=" margin: .3em 0 .5em;">
 
-
+                            
                                 <div>
                                     <h4 style="font-size: 15px;line-height: 1.1;">
                                     Success
@@ -125,35 +125,35 @@ POST service endpoint that takes URL and converts the associated webpage to a PN
                                         </tr>
                                         </thead>
                                         <tbody>
+                                        
 
+                                        
+                                        
 
-
-
-
-
+                                        
                                         <tr style="border-bottom: 1px solid silver;">
                                             <td style="padding: 12px 8px;border: #e0e0e0 1px solid;">message</td>
                                             <td style="padding: 12px 8px;border: #e0e0e0 1px solid;">string</td>
                                             <td style="padding: 12px 8px;border: #e0e0e0 1px solid;">success</td>
                                         </tr>
+                                        
+                                        
 
-
-
-
+                                        
                                         <tr style="border-bottom: 1px solid silver;">
                                             <td style="padding: 12px 8px;border: #e0e0e0 1px solid;">downloadURL</td>
                                             <td style="padding: 12px 8px;border: #e0e0e0 1px solid;">string</td>
                                             <td style="padding: 12px 8px;border: #e0e0e0 1px solid;">The relative URL for download of the captured image. Root will be the same as the API.</td>
                                         </tr>
-
-
+                                        
+                                        
                                         </tbody>
                                     </table>
                                 </div>
-
+                            
                                 <div>
                                     <h4 style="font-size: 15px;line-height: 1.1;">
-                                    Error
+                                    Error 
                                         500 (Object)</h4>
                                     <table style="width: 100%;border-collapse: collapse;">
                                         <thead>
@@ -164,40 +164,39 @@ POST service endpoint that takes URL and converts the associated webpage to a PN
                                         </tr>
                                         </thead>
                                         <tbody>
+                                        
 
+                                        
+                                        
 
-
-
-
-
+                                        
                                         <tr style="border-bottom: 1px solid silver;">
                                             <td style="padding: 12px 8px;border: #e0e0e0 1px solid;">message</td>
                                             <td style="padding: 12px 8px;border: #e0e0e0 1px solid;">string</td>
                                             <td style="padding: 12px 8px;border: #e0e0e0 1px solid;">Error message</td>
                                         </tr>
+                                        
+                                        
 
-
-
-
+                                        
                                         <tr style="border-bottom: 1px solid silver;">
                                             <td style="padding: 12px 8px;border: #e0e0e0 1px solid;">error</td>
                                             <td style="padding: 12px 8px;border: #e0e0e0 1px solid;">object</td>
                                             <td style="padding: 12px 8px;border: #e0e0e0 1px solid;">Error object.</td>
                                         </tr>
-
-
+                                        
+                                        
                                         </tbody>
                                     </table>
                                 </div>
-
+                            
 
                         </div>
                     </section>
                 </div>
-            </li>
-
-        </ul>
-
-</ul>
-
+            </div>
+            
+        </div>
+        
+</div>
 
