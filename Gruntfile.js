@@ -41,7 +41,7 @@ module.exports = function(grunt) {
         tasks: ['jshint:lib_test', 'nodeunit']
       },
       doc_template: {
-        files: ['./doc-creation/api-doc-template.html', './doc-creation/swagger.json' ],
+        files: ['./doc-creation/api-doc-template-snippet.html', './doc-creation/api-documentation.json' ],
         tasks: ['shell:buildMarkdown']
       }
     },

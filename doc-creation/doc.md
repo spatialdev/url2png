@@ -1,31 +1,29 @@
 <div style="font-family: sans-serif;">
     <h2>API Documentation</h2>
-    <ul style="list-style-type:none; padding:0;" >
+    <div style="list-style-type:none; padding:0;" >
         
         
-            <li style="
-               margin-bottom: 12px;
-               margin-top: 3px;"><a style ="font-family: monospace;
+            <div style="margin-bottom: 12px;margin-top: 3px;"><a style ="font-family: monospace;
                font-size: 1.2em; text-decoration: none" href="#/url2png_post">
                 <span style="color:#08C;">/url2png</span>
                 <div style="display: inline-block; color: #FFF; border-radius: 3px; padding: .25em .5em;
                          background-color: #13c20f;
-                        ">POST</div></a></li>
+                        ">POST</div></a></div>
         
     
-    </ul>
+    </div>
 </div>
 <hr>
-<ul style="list-style-type:none; padding:0; font-family: sans-serif;">
+<div style="list-style-type:none; padding:0; font-family: sans-serif;">
     
-    <li style="list-style-type:none; padding:0">
+    <div style="list-style-type:none; padding:0">
         <header style ="font-family: monospace;
                font-size: 1.5em;
                margin-bottom: 12px;
                margin-top: 3px; color:#333">/url2png</header>
-        <ul style="list-style-type:none; padding:0">
+        <div style="list-style-type:none; padding:0">
             
-            <li style="font-family: sans-serif;
+            <div style="font-family: sans-serif;
                   list-style-type: none;
                   border-radius: 3px;
                   position: relative;
@@ -191,9 +189,9 @@
                         </div>
                     </section>
                 </div>
-            </li>
+            </div>
             
-        </ul>
+        </div>
         
-</ul>
+</div>
 
