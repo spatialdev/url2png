@@ -10,11 +10,11 @@
 
 {% for path, verbs in paths %}
 {% for verb, verbProp in verbs %}
-<a id="{{path}}_{{verb}}">{{path}}</a> &nbsp;&nbsp;![{{verb | upper}}]({{imageDir}}{{verb}}.png)
+<a id="{{path}}_{{verb}}">{{path}}</a>&nbsp;&nbsp;![{{verb | upper}}]({{imageDir}}{{verb}}.png)
 #####{{verbProp.description}}
 
 #### Parameters
-|Name|Req.|In|Type|Description|
+|Name|Required|In|Type|Description|
 |---|---|---|---|---|{% for parameter in verbProp.parameters %}
 |{{parameter.name}}|{{parameter.required}}|{{parameter.in}}|{{parameter.type}}|{{parameter.description}}|{% endfor %}
 
