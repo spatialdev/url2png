@@ -10,8 +10,9 @@
 
 
 
-<a id="/url2png_post">/url2png</a> &nbsp;&nbsp;![POST](/docs/images/post.png)
-#####The url2png endpoint accepts a URL and returns a link to download a PNG representation of the web page at the URL.
+<a id="/url2png_post">/url2png</a>&nbsp;&nbsp;![POST](/docs/images/post.png)
+
+The url2png endpoint accepts a URL and returns a link to download a PNG representation of the web page at the URL.
 
 #### Parameters
 |Name|Required|In|Type|Description|
