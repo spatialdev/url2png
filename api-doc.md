@@ -21,22 +21,19 @@ The url2png endpoint accepts a URL and returns a link to download a PNG represen
 |viewport_width|false|body|number|The width of the produced PNG (default is 1440px)|
 |delay|false|body|number|The time delay (ms) before executing image capture (default is 5000 ms)|
 
-##### Responses
-<br/>
 
-
-######Success 200 (Object)
+#####Success 200 (Object)
 |Name|Type|Description|
 |---|---|---|
 |message|string|success|
 |downloadURL|string|The relative URL for download of the captured image. Root will be the same as the API.|
 
-######Error 400 (Object)
+#####Error 400 (Object)
 |Name|Type|Description|
 |---|---|---|
 |message|string|No URL to print in post data|
 
-######Error 500 (Object)
+#####Error 500 (Object)
 |Name|Type|Description|
 |---|---|---|
 |message|string|Error message|
