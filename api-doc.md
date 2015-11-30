@@ -1,6 +1,3 @@
-# url2png
-POST service endpoint that takes URL and converts the associated webpage to a PNG image.  Download link for the image is returned.
-
 ## Url2Png API: v1.0.0
 ####Table of Contents
 

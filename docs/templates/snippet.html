@@ -1,11 +1,9 @@
 <div style="font-family: sans-serif;">
-    <h2>API Documentation</h2>
-    <ul style="list-style-type:none; padding:0;" >
+    <h2>{{info.title}}: v{{info.version}}</h2>
+    <div style="list-style-type:none; padding:0;" >
         {% for path, verbs in paths %}
         {% for verb, verbProp in verbs %}
-            <li style="
-               margin-bottom: 12px;
-               margin-top: 3px;"><a style ="font-family: monospace;
+            <div style="margin-bottom: 12px;margin-top: 3px;"><a style ="font-family: monospace;
                font-size: 1.2em; text-decoration: none" href="#{{path}}_{{verb}}">
                 <span style="color:#08C;">{{path}}</span>
                 <div style="display: inline-block; color: #FFF; border-radius: 3px; padding: .25em .5em;
@@ -14,22 +12,22 @@
                         {% elif verb == 'put' %} background-color: #ffdc00;
                         {% elif verb == 'patch' %} background-color: #ff9000;
                         {% elif verb == 'delete' %} background-color: #e30012;
-                        {% endif %}">{{verb | upper}}</div></a></li>
+                        {% endif %}">{{verb | upper}}</div></a></div>
         {% endfor %}
     {% endfor %}
-    </ul>
+    </div>
 </div>
 <hr>
-<ul style="list-style-type:none; padding:0; font-family: sans-serif;">
+<div style="list-style-type:none; padding:0; font-family: sans-serif;">
     {% for path, verbs in paths %}
-    <li style="list-style-type:none; padding:0">
+    <div style="list-style-type:none; padding:0">
         <header style ="font-family: monospace;
                font-size: 1.5em;
                margin-bottom: 12px;
                margin-top: 3px; color:#333">{{path}}</header>
-        <ul style="list-style-type:none; padding:0">
+        <div style="list-style-type:none; padding:0">
             {% for verb, verbProp in verbs %}
-            <li style="font-family: sans-serif;
+            <div style="font-family: sans-serif;
                   list-style-type: none;
                   border-radius: 3px;
                   position: relative;
@@ -136,9 +134,9 @@
                         </div>
                     </section>
                 </div>
-            </li>
+            </div>
             {% endfor %}
-        </ul>
+        </div>
         {% endfor %}
-</ul>
+</div>
 

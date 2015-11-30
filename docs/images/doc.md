@@ -1,14 +1,16 @@
-# url2png
-POST service endpoint that takes URL and converts the associated webpage to a PNG image.  Download link for the image is returned.
-
 ## Url2Png API: v1.0.0
 ####Table of Contents
 
-[/url2png](#/url2png_post)&nbsp;&nbsp;![POST](/docs/images/post.png)&nbsp;&nbsp;&nbsp;&nbsp;Convert webpage to PNG.
+
+[/url2png](#/url2png_post)&nbsp;&nbsp;![POST](/doc-creation/post.png)&nbsp;&nbsp;&nbsp;&nbsp;Convert webpage to PNG.
+
+
 
 ***
 
-<a id="/url2png_post">/url2png</a> &nbsp;&nbsp;![POST](/docs/images/post.png)
+
+
+<a id="/url2png_post">/url2png</a> &nbsp;&nbsp;![POST](/doc-creation/post.png)
 #####The url2png endpoint accepts a URL and returns a link to download a PNG representation of the web page at the URL.
 
 #### Parameters
@@ -20,7 +22,7 @@ POST service endpoint that takes URL and converts the associated webpage to a PN
 
 
 
-####Success 200 (Object)
+####Success200 (Object)
 |Name|Type|Description|
 |---|---|---|
 |message|string|success|
