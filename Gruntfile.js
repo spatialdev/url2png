@@ -41,7 +41,7 @@ module.exports = function(grunt) {
         tasks: ['jshint:lib_test', 'nodeunit']
       },
       doc_template: {
-        files: ['./doc-creation/api-doc-template-snippet.html', './doc-creation/api-documentation.json' ],
+        files: ['./doc-creation/api-doc-template-snippet.html', './doc-creation/api-doc-template-snippet-md.html', './doc-creation/api-documentation.json' ],
         tasks: ['shell:buildMarkdown']
       }
     },
@@ -50,7 +50,7 @@ module.exports = function(grunt) {
         stderr: false
       },
       buildMarkdown: {
-        command: 'node doc-creation/api-doc-gen.js'
+        command: 'node docs/index.js'
       }
     }
   });

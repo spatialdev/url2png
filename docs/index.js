@@ -4,7 +4,7 @@
 "use strict";
 
 var nunjucks = require('nunjucks');
-var swaggerJSON = require('./api-documentation.json');
+var swaggerJSON = require('../api-documentation.json');
 var lodash = require('lodash');
 var fs = require('fs');
 var jsonRefs = require('json-refs');
@@ -13,6 +13,8 @@ var apiModel = jsonRefs.resolveLocalRefs(swaggerJSON).resolved;
 
 nunjucks.configure({ autoescape: true });
 
+// Swagger spec may lead to a high degree of nesting in response objects (objects within objects with objects, etc). This
+// function flattens that schmema and assigns each schema item a "depth" property.  The outer object wrapper has depth -1.
 function recurvsiveFlatten(name, obj, arr, depth){
 
         if (obj.hasOwnProperty('items')) {
@@ -50,6 +52,7 @@ function recurvsiveFlatten(name, obj, arr, depth){
 
 }
 
+// Parse the Swagger schema and reform to our liking
 lodash.forIn(apiModel.paths, function (path) {
 
     lodash.forIn(path, function (verb) {
@@ -60,27 +63,24 @@ lodash.forIn(apiModel.paths, function (path) {
 
             recurvsiveFlatten(undefined, response.schema, response.schemaArr, -1);
 
-            console.log(response.schemaArr)
         });
 
     });
 
 });
 
-fs.writeFile('doc-creation/doc.md', nunjucks.render('doc-creation/api-doc-template-snippet.html', apiModel), function (err) {
-    if (err) {
-        console.error(err);
-        throw err;
-    }
-    console.log('It\'s saved!');
-    process.exit();
-});
+apiModel.imageDir = "/docs/images/";
 
-fs.writeFile('doc-creation/doc.html', nunjucks.render('doc-creation/api-doc-template.html', apiModel), function (err) {
-    if (err) {
-        console.error(err);
-        throw err;
-    }
-    console.log('It\'s saved!');
+try {
+    fs.writeFileSync('api-doc.md', nunjucks.render('docs/templates/snippet.md', apiModel));
+    fs.writeFile('api-doc.html', nunjucks.render('docs/templates/shell.html', apiModel));
+    console.log('Static docs created.');
     process.exit();
-});
+}
+catch (e){
+    console.error(e);
+    process.exit(1);
+}
+
+
+
