@@ -1,41 +1,33 @@
 # url2png
 POST service endpoint that takes URL and converts the associated webpage to a PNG image.  Download link for the image is returned.
 
-## Url2Png API: v1.0.0
+## {{info.title}}: v{{info.version}}
 ####Table of Contents
-
-
-[/url2png](#/url2png_post)&nbsp;&nbsp;![POST](/docs/images/post.png)&nbsp;&nbsp;&nbsp;&nbsp;Convert webpage to PNG.
-
-
+{% for path, verbs in paths %}
+{% for verb, verbProp in verbs %}
+[{{path}}](#{{path}}_{{verb}})&nbsp;&nbsp;![{{verb | upper}}]({{imageDir}}{{verb}}.png)&nbsp;&nbsp;&nbsp;&nbsp;{{verbProp.summary}}
+{% endfor %}
+{% endfor %}
 
 ***
 
+{% for path, verbs in paths %}
+{% for verb, verbProp in verbs %}
+####<a id="{{path}}_{{verb}}">{{path}}</a>&nbsp;&nbsp;![{{verb | upper}}]({{imageDir}}{{verb}}.png)
 
+{{verbProp.description}}
 
-<a id="/url2png_post">/url2png</a>&nbsp;&nbsp;![POST](/docs/images/post.png)
-
-The url2png endpoint accepts a URL and returns a link to download a PNG representation of the web page at the URL.
-
-#### Parameters
+##### Parameters
 |Name|Required|In|Type|Description|
-|---|---|---|---|---|
-|url|true|body|string|URL of webpage to convert|
-|viewport_width|false|body|number|The width of the produced PNG (default is 1440px)|
-|delay|false|body|number|The time delay (ms) before executing image capture (default is 5000 ms)|
+|---|---|---|---|---|{% for parameter in verbProp.parameters %}
+|{{parameter.name}}|{{parameter.required}}|{{parameter.in}}|{{parameter.type}}|{{parameter.description}}|{% endfor %}
 
 
-
-####Success 200 (Object)
+{% for resKey, resVal in verbProp.responses %}
+#####{% if resKey == '200' %}Success {% else %}Error {% endif %}{{resKey}} ({{resVal.schemaArr[0].type}})
 |Name|Type|Description|
-|---|---|---|
-|message|string|success|
-|downloadURL|string|The relative URL for download of the captured image. Root will be the same as the API.|
-
-####Error 500 (Object)
-|Name|Type|Description|
-|---|---|---|
-|message|string|Error message|
-|error|object|Error object.|
-
-
+|---|---|---|{% for val in resVal.schemaArr %}{% if val.depth > -1 %}
+|{% for i in range(0, val.depth) %}&nbsp;{% endfor %}{{val.name}}|{{val.type}}|{{val.description}}|{% endif %}{% endfor %}
+{% endfor %}
+{% endfor %}
+{% endfor %}

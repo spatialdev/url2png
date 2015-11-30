@@ -14,7 +14,7 @@
 
 The url2png endpoint accepts a URL and returns a link to download a PNG representation of the web page at the URL.
 
-#### Parameters
+##### Parameters
 |Name|Required|In|Type|Description|
 |---|---|---|---|---|
 |url|true|body|string|URL of webpage to convert|
@@ -23,13 +23,13 @@ The url2png endpoint accepts a URL and returns a link to download a PNG represen
 
 
 
-####Success 200 (Object)
+#####Success 200 (Object)
 |Name|Type|Description|
 |---|---|---|
 |message|string|success|
 |downloadURL|string|The relative URL for download of the captured image. Root will be the same as the API.|
 
-####Error 500 (Object)
+#####Error 500 (Object)
 |Name|Type|Description|
 |---|---|---|
 |message|string|Error message|
