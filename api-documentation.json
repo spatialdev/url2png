@@ -84,10 +84,10 @@
                                 "error" : {
                                     "type": "object",
                                     "description": "Error object."
+                                }
                             }
                         }
                     }
-                }
                 }
             }
         }

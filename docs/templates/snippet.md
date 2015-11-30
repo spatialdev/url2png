@@ -7,7 +7,7 @@
 {% endfor %}
 
 ***
-
+<br/>
 {% for path, verbs in paths %}
 {% for verb, verbProp in verbs %}
 ####<a id="{{path}}_{{verb}}">{{path}}</a>&nbsp;&nbsp;![{{verb | upper}}]({{imageDir}}{{verb}}.png)
