@@ -32,10 +32,16 @@ The url2png endpoint accepts a URL and returns a link to download a PNG represen
 |message|string|success|
 |downloadURL|string|The relative URL for download of the captured image. Root will be the same as the API.|
 
+#####Error 400 (Object)
+|Name|Type|Description|
+|---|---|---|
+|message|string|No URL to print in post data|
+
 #####Error 500 (Object)
 |Name|Type|Description|
 |---|---|---|
 |message|string|Error message|
 |error|object|Error object.|
+
 
 

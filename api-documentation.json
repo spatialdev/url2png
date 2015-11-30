@@ -49,7 +49,7 @@
                         "schema": {
                             "type": "object",
                             "properties": {
-                                "message":{
+                                "message": {
                                     "type": "string",
                                     "description": "success"
                                 },
@@ -57,6 +57,7 @@
                                     "type": "string",
                                     "description": "The relative URL for download of the captured image. Root will be the same as the API."
                                 }
+                            }
                         }
                     },
                     "400": {
@@ -69,7 +70,6 @@
                                     "description" : "No URL to print in post data"
                                 }
                             }
-                        }
                         }
                     },
                     "500" : {
