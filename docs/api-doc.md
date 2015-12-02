@@ -2,7 +2,7 @@
 #### Table of Contents
 
 
-[/url2png](#/url2png_post)&nbsp;&nbsp;![POST](post.png)&nbsp;&nbsp;&nbsp;&nbsp;Convert webpage to PNG.
+[/url2png](#/url2png_post)&nbsp;&nbsp;![POST](https://github.com/spatialdev/static-api-docs/blob/master/images/post.png?raw=true)&nbsp;&nbsp;&nbsp;&nbsp;Convert webpage to PNG.
 
 
 
@@ -10,7 +10,7 @@
 <br/>
 
 
-#### <a id="/url2png_post">/url2png</a>&nbsp;&nbsp;![POST](post.png)
+#### <a id="/url2png_post">/url2png</a>&nbsp;&nbsp;![POST](https://github.com/spatialdev/static-api-docs/blob/master/images/post.png?raw=true)
 
 The url2png endpoint accepts a URL and returns a link to download a PNG representation of the web page at the URL.
 
