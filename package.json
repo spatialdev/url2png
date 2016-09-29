@@ -1,17 +1,23 @@
 {
   "engines": {
-    "node": ">= 0.10.0"
+    "node": ">= 4.3.2"
   },
   "devDependencies": {
     "grunt": "~0.4.5",
     "grunt-contrib-jshint": "~0.10.0",
     "grunt-contrib-nodeunit": "~0.4.1",
     "grunt-contrib-watch": "~0.6.1",
-    "grunt-shell": "^1.1.2",
-    "static-api-docs": "0.0.8"
+    "grunt-shell": "^1.1.2"
   },
   "dependencies": {
+    "banquo": "^0.3.1",
+    "body-parser": "^1.15.2",
+    "compression": "^1.6.2",
+    "cors": "^2.8.1",
+    "cron": "^1.1.0",
+    "express": "^4.14.0",
     "json-refs": "^1.3.0",
-    "lodash": "^3.10.1"
+    "lodash": "^3.10.1",
+    "static-api-docs": "^0.1.7"
   }
 }

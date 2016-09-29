@@ -51,9 +51,9 @@ app.use(function (err, req, res, next) {
 
 // START THE SERVER
 // =============================================================================
-app.listen(port, function () {
+app.listen(3001, function () {
 
-    console.log('url2png API listening on port ' + port + '.');
+    console.log('url2png API listening on port ' + 3001 + '.');
 
 });
 
