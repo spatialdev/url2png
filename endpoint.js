@@ -48,7 +48,7 @@ router.post('/',  function (req, res, next) {
     // We are going to capture the web page as a PNG and save it with a random name in the designated export directory
     var randomString = Math.random().toString(36).substr(2, 9);
     var timestamp = Date.now();
-    var filePath ="/" + PNGEXPORTDIRECTORY + randomString + timestamp + '.png';
+    var filePath ="/exports/" + PNGEXPORTDIRECTORY + randomString + timestamp + '.png';
 
     // Print options
     var opts = {
