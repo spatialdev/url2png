@@ -5,27 +5,32 @@ module.exports = function(grunt) {
   grunt.initConfig({
     // Task configuration.
 
+    static_api_docs: {
+      main: {
+        src: "api-documentation.yaml",
+        dest: "docs",
+        options: {
+          filename: "api-docs",
+          supressMD: true
+        }
+      }
+    },
+
     watch: {
 
       documentation: {
-        files: ['api-documentation.json' ],
-        tasks: ['static_api_docs:main']
-      }
-    },
-    static_api_docs: {
-
-      main: {
-        src: 'api-documentation.json',
-        dest: 'docs'
+        files: ['api-documentation.yml' ],
+        tasks: ['static_api_docs:test']
       }
     }
   });
 
-  grunt.loadNpmTasks('grunt-contrib-watch');
   grunt.loadNpmTasks('static-api-docs');
+  grunt.loadNpmTasks('grunt-contrib-watch');
+  grunt.loadNpmTasks('grunt-contrib-clean');
 
   // Default task.
   //grunt.registerTask('default', ['jshint', 'nodeunit']);
-  //grunt.registerTask('default', ['static-api-docs']);
+  grunt.registerTask('default', ['static_api_docs:main']);
 
 };

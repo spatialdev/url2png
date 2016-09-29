@@ -49,6 +49,11 @@ app.use(function (err, req, res, next) {
 
 });
 
+// application -------------------------------------------------------------
+app.use(function(req, res){
+    res.sendFile(__dirname + "/docs/api-doc.html");
+});
+
 // START THE SERVER
 // =============================================================================
 app.listen(3001, function () {
