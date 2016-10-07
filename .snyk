@@ -1,0 +1,22 @@
+version: v1.5.2
+ignore:
+  'npm:uglify-js:20150824':
+    - banquo > socket.io > socket.io-client > uglify-js:
+        reason: Testing
+        expires: '2016-11-06T21:38:30.580Z'
+  'npm:uglify-js:20151024':
+    - banquo > socket.io > socket.io-client > uglify-js:
+        reason: Testing
+        expires: '2016-11-06T21:38:30.581Z'
+patch:
+  'npm:request:20160119':
+    - banquo > phantomjs > request:
+        patched: '2016-10-07T21:36:28.981Z'
+  'npm:tough-cookie:20160722':
+    - static-api-docs > nunjucks > chokidar > fsevents > node-pre-gyp > request > tough-cookie:
+        patched: '2016-10-07T21:36:28.981Z'
+    - banquo > phantomjs > request > tough-cookie:
+        patched: '2016-10-07T21:36:28.981Z'
+  'npm:ws:20160104':
+    - banquo > socket.io > socket.io-client > ws:
+        patched: '2016-10-07T21:36:28.981Z'
