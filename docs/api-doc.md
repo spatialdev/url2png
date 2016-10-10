@@ -1,25 +1,39 @@
-## Url2Png API: v1.0.0
-#### Table of Contents
+# Url2Png API
+### v. 1.0.0
+
+**Description:**  
+Convert a URL to a PNG image and download.
+**Base Path:** /  
+
+
+**Base url:** url2png.spatialdev.com// 
+
+
+## Table of Contents
 
 
 [/url2png](#/url2png_post)&nbsp;&nbsp;![POST](https://github.com/spatialdev/static-api-docs/blob/master/images/post.png?raw=true)&nbsp;&nbsp;&nbsp;&nbsp;Convert webpage to PNG.
 
+[/url2png](#/url2png_group)&nbsp;&nbsp;![GROUP](https://github.com/spatialdev/static-api-docs/blob/master/images/group.png?raw=true)&nbsp;&nbsp;&nbsp;&nbsp;
 
 
-***
-<br/>
+
+## API Endpoints
+
 
 
 #### <a id="/url2png_post">/url2png</a>&nbsp;&nbsp;![POST](https://github.com/spatialdev/static-api-docs/blob/master/images/post.png?raw=true)
 
-The url2png endpoint accepts a URL and returns a link to download a PNG representation of the web page at the URL.
+The url2png endpoint accepts a URL and returns a link to download
+
 
 ##### Parameters
-|Name|Required|In|Type|Description|
+|Name|In|Required|Type|Description|
 |---|---|---|---|---|
-|url|true|body|string|URL of webpage to convert|
-|viewport_width|false|body|number|The width of the produced PNG (default is 1440px)|
-|delay|false|body|number|The time delay (ms) before executing image capture (default is 5000 ms)|
+|url|body|false|string|URL of webpage to convert|
+|viewport_width|body|false|number|The width of the produced PNG (default is 1440px)|
+|delay|body|false|number|The time delay (ms) before executing image capture (default is 5000 ms)|
+
 
 
 ##### Success 200 (Object)
@@ -38,6 +52,14 @@ The url2png endpoint accepts a URL and returns a link to download a PNG represen
 |---|---|---|
 |message|string|Error message|
 |error|object|Error object.|
+
+
+#### <a id="/url2png_group">/url2png</a>&nbsp;&nbsp;![GROUP](https://github.com/spatialdev/static-api-docs/blob/master/images/group.png?raw=true)
+
+
+
+
+
 
 
 

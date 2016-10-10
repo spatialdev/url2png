@@ -10,7 +10,7 @@ module.exports = function(grunt) {
         src: "api-documentation.yaml",
         dest: "docs",
         options: {
-          filename: "api-docs",
+          filename: "api-doc",
           supressMD: true
         }
       }
@@ -20,7 +20,7 @@ module.exports = function(grunt) {
 
       documentation: {
         files: ['api-documentation.yml' ],
-        tasks: ['static_api_docs:test']
+        tasks: ['static_api_docs:main']
       }
     }
   });
