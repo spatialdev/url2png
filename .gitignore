@@ -10,3 +10,5 @@
 exports/*.png
 
 node_modules/**
+
+settings/settings.js

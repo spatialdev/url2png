@@ -55,6 +55,9 @@ paths:
               message:
                 type: string
                 description: No URL to print in post data
+              status:
+                type: string
+                description: Error Status
         '500':
           description: Server error.
           schema:
@@ -63,6 +66,6 @@ paths:
               message:
                 type: string
                 description: Error message
-              error:
-                type: object
-                description: Error object.
+              status:
+                type: string
+                description: Error Status

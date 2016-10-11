@@ -6,6 +6,7 @@ var banquo = require('banquo');
 var fs = require('fs');
 var path = require('path');
 var CronJob = require('cron').CronJob;
+const CustomError = require('./common/error');
 
 var PNGEXPORTDIRECTORY = 'exports';
 
@@ -41,8 +42,7 @@ router.post('/',  function (req, res, next) {
 
     // If no url, return 400 error
     if(!url) {
-        res.status(400).json({message:"No URL to print in post data."});
-        return;
+        return next(new CustomError('No URL to print in post data.', 400));
     }
 
     // We are going to capture the web page as a PNG and save it with a random name in the designated export directory
@@ -64,8 +64,7 @@ router.post('/',  function (req, res, next) {
     banquo.capture(opts, function(err, imageData){
         if (err) {
             console.log(err);
-            res.status(500).json({message:err.message, error:err});
-            return;
+            return next(new CustomError(err.message, 500));
         }
 
         // Success; send 200 and the URL of the image. Will be deleted with Cron job.
