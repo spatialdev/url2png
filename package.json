@@ -19,13 +19,6 @@
     "json-refs": "^1.3.0",
     "lodash": "^3.10.1",
     "minimist": "^1.2.0",
-    "static-api-docs": "^0.1.7",
-    "snyk": "^1.19.1"
-  },
-  "scripts": {
-    "test": "snyk test",
-    "snyk-protect": "snyk protect",
-    "prepublish": "npm run snyk-protect"
-  },
-  "snyk": true
+    "static-api-docs": "^0.1.7"
+  }
 }
