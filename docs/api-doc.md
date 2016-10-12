@@ -46,12 +46,13 @@ The url2png endpoint accepts a URL and returns a link to download
 |Name|Type|Description|
 |---|---|---|
 |message|string|No URL to print in post data|
+|status|string|Error Status|
 
 ##### Error 500 (Object)
 |Name|Type|Description|
 |---|---|---|
 |message|string|Error message|
-|error|object|Error object.|
+|status|string|Error Status|
 
 
 #### <a id="/url2png_group">/url2png</a>&nbsp;&nbsp;![GROUP](https://github.com/spatialdev/static-api-docs/blob/master/images/group.png?raw=true)

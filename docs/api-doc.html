@@ -11,6 +11,35 @@
     .demo-list-icon {
       width: 300px;
     }
+
+    html>body {
+      font-family: 'Roboto','Helvetica','Arial',sans-serif!important;
+      background-color: #FAFAFA;
+    }
+
+    .mdl-list__item {
+      font-size: 12px;
+      padding: 10px;
+    }
+
+    .mdl-list__item:hover {
+      background-color: #eee;
+      cursor: pointer;
+    }
+
+    .nav-group-header {
+      font-size: 14px;
+      margin: 0;
+      text-transform: uppercase;
+      padding: 0 10px;
+      font-weight: 500;
+    }
+
+    .nav-group-links{
+      text-decoration: none;
+      text-transform: none;
+    }
+
   </style>
 </head>
 <body>
@@ -73,7 +102,7 @@
 
       <p>Convert a URL to a PNG image and download.</p>
       
-      <p><strong>Base url: </strong> url2png.spatialdev.com//</p>
+        <p><strong>Base url: </strong> url2png.spatialdev.com//</p>
       
       <div style="list-style-type:none; padding:0; font-family: sans-serif;">
         <h2>API Endpoints</h2>
@@ -247,6 +276,17 @@
                         </tr>
                         
                         
+
+                        
+                        <tr style="border-bottom: 1px solid silver;">
+                          <td style="padding: 12px 8px;border: #e0e0e0 1px solid;">status
+                          </td>
+                          <td style="padding: 12px 8px;border: #e0e0e0 1px solid;">string</td>
+                          <td style="padding: 12px 8px;border: #e0e0e0 1px solid;">Error Status</td>
+
+                        </tr>
+                        
+                        
                         </tbody>
                       </table>
                     </div>
@@ -283,10 +323,10 @@
 
                         
                         <tr style="border-bottom: 1px solid silver;">
-                          <td style="padding: 12px 8px;border: #e0e0e0 1px solid;">error
+                          <td style="padding: 12px 8px;border: #e0e0e0 1px solid;">status
                           </td>
-                          <td style="padding: 12px 8px;border: #e0e0e0 1px solid;">object</td>
-                          <td style="padding: 12px 8px;border: #e0e0e0 1px solid;">Error object.</td>
+                          <td style="padding: 12px 8px;border: #e0e0e0 1px solid;">string</td>
+                          <td style="padding: 12px 8px;border: #e0e0e0 1px solid;">Error Status</td>
 
                         </tr>
                         
@@ -356,7 +396,24 @@
 </div>
 
 <script defer src="https://code.getmdl.io/1.2.1/material.min.js"></script>
-<script src="../js/main.js"></script>
+<script>
+  /**
+   * Custom Javacsript
+   *
+   */
+
+// close the left mdl drawer on click
+  function close() {
+    var d = document.querySelector('.mdl-layout');
+
+    if(document.querySelector('.mdl-layout.is-small-screen') !== null){
+      d.MaterialLayout.toggleDrawer();
+    }
+  }
+
+  document.querySelector('.mdl-layout__drawer').addEventListener('click', close);
+
+</script>
 </body>
 </html>
 
