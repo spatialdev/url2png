@@ -54,8 +54,8 @@ router.post('/',  function (req, res, next) {
     var opts = {
         mode: 'save',
         url: url,
-        viewport_width: 1440,
-        delay: 5000,
+        viewport_width: viewportWidth,
+        delay: delay,
         out_file: '.' + filePath,
         downloadURL: filePath
     };
