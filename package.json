@@ -10,7 +10,6 @@
     "grunt-shell": "^1.1.2"
   },
   "dependencies": {
-    "banquo": "^0.3.1",
     "body-parser": "^1.15.2",
     "compression": "^1.6.2",
     "cors": "^2.8.1",
@@ -19,6 +18,7 @@
     "json-refs": "^1.3.0",
     "lodash": "^3.10.1",
     "minimist": "^1.2.0",
+    "phantomjs-prebuilt": "^2.1.14",
     "static-api-docs": "^0.1.7"
   }
 }

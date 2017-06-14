@@ -2,13 +2,16 @@
 
 var express = require('express');
 var router = express.Router();
-var banquo = require('banquo');
 var fs = require('fs');
 var path = require('path');
 var CronJob = require('cron').CronJob;
 const CustomError = require('./common/error');
 
 var PNGEXPORTDIRECTORY = 'exports';
+
+var childProcess = require('child_process');
+var phantomjs = require('phantomjs-prebuilt');
+var binPath = phantomjs.path;
 
 // Cron job to clear out exports folder;
 new CronJob('00 00 00 * * *', function(){
@@ -38,7 +41,7 @@ router.post('/',  function (req, res, next) {
     // Get POST data
     var url = req.body.url || null;
     var viewportWidth = req.body.viewport_width || 1440;
-    var delay = req.body.delay || 5000;
+    var delay = req.body.delay || 200;
 
     // If no url, return 400 error
     if(!url) {
@@ -54,22 +57,34 @@ router.post('/',  function (req, res, next) {
     var opts = {
         mode: 'save',
         url: url,
-        viewport_width: viewportWidth,
-        delay: delay,
+        viewport_width: viewportWidth.toString(),
+        delay: parseInt(delay),
         out_file: '.' + filePath,
         downloadURL: filePath
     };
 
-    // Use banquo to capture the web page at the posted URL
-    banquo.capture(opts, function(err, imageData){
-        if (err) {
+    // set up rasterize.js arguments
+    // Usage: rasterize.js URL filename [paperwidth*paperheight|paperformat] [timeout]
+    var childArgs = [
+        path.join(__dirname, 'rasterize.js'),
+        url,
+        opts.out_file,
+        viewportWidth,
+        delay
+    ];
+
+    childProcess.execFile(binPath, childArgs, function(err, stdout, stderr) {
+        // handle results
+        if (err || stderr) {
             console.log(err);
+            console.log(stderr);
             return next(new CustomError(err.message, 500));
         }
+        console.log(stdout);
 
         // Success; send 200 and the URL of the image. Will be deleted with Cron job.
         res.status(200).json({message:'success', downloadURL: opts.downloadURL});
-    });
+    })
 
 });
 
