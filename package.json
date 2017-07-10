@@ -1,4 +1,8 @@
 {
+  "name": "url2png",
+  "version": "1.0.0",
+  "description": "url2png is an API wrapper around 3rd party technologies that execute screen capture of a URL",
+  "main": "app.js",
   "engines": {
     "node": ">= 0.10.0"
   },
